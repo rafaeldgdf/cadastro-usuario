@@ -1,0 +1,101 @@
+/* Container principal */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 8px;
+  background-color: #f7f7f7;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Formulário com grid flexível */
+.form {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Ajustando as colunas */
+  gap: 20px;
+  align-items: start; /* Alinha os itens no início da linha */
+}
+
+/* Grupo de inputs */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Campo de input */
+input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Container de endereço */
+.enderecoContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas para os campos de endereço */
+  gap: 15px;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  grid-column: span 2; /* Para que o endereço ocupe toda a largura disponível */
+}
+
+/* Botões */
+button {
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+.submitButton {
+  background-color: #28a745;
+  grid-column: span 2; /* Garante que o botão de submit ocupe toda a largura */
+}
+
+.submitButton:hover {
+  background-color: #218838;
+}
+
+.addEnderecoButton {
+  background-color: transparent;
+  color: #007bff;
+  font-size: 14px;
+  text-decoration: underline;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  text-align: center; 
+  grid-column: span 2; 
+}
+
+.addEnderecoButton:hover {
+  text-decoration: none;
+}
+
+/* Ajustes de layout para telas pequenas */
+@media (max-width: 600px) {
+  .form {
+      grid-template-columns: 1fr;
+  }
+
+  .enderecoContainer {
+      grid-template-columns: 1fr;
+  }
+}
